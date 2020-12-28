@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<style>
+    .col-3 {
+        border: 1px solid black;
+        width: 300px;
+        height: 100px;
+        background-color: #ccc;
+    }
+</style>
+
+<body>
+    <div class="container d-flex">
+        <div class="row">
+            <div class="col-3">box1</div>
+            <div class="col-3">box2</div>
+            <div class="col-3">box3</div>
+            <div class="col-3">box4</div>
+            <div class="col-3">box5</div>
+            <div class="col-3">box6</div>
+            <div class="col-3">box7</div>
+            <div class="col-3">box8</div>
+            <div class="col-3">box9</div>
+            <div class="col-3">box10</div>
+            <div class="col-3">box11</div>
+            <div class="col-3">box12</div>
+            <div class="col-3">box13</div>
+            <div class="col-3">box14</div>
+            <div class="col-3">box15</div>
+            <div class="col-3">box16</div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        //被點擊的div以後的div都變成別的顏色(發現不需用到.siblings())
+        $('.col-3').click(function () {
+            $(this).nextAll().css('background', 'darkcyan')
+        });
+
+    </script>
+
+</body>
+
+</html>
