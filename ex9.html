@@ -65,7 +65,10 @@
                 $('article').addClass('fontM')
             }
 
-            if ($(this))
+            if ($(this).is(":contains('L')")) {
+                $('article').removeClass();
+                $('article').addClass('fontL')
+            }
 
 
         });
