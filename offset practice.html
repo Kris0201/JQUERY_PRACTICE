@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>offset</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
     <style>
         .box {
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background-color: coral;
             top: 10px;
             right: 10px;
         }
 
-        .dot {
+        .dove {
+            font-size: 100px;
+        }
+
+        /* .dot {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             background-color: rgb(150, 95, 141);
             transition: .5s;
-        }
+        } */
     </style>
 </head>
 
@@ -29,24 +34,26 @@
     <button>click me</button>
     <div class="box"></div>
 
-    <div class="dot"></div>
+    <div class="dot"><i class="fas fa-dove dove"></i></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
         //指定.box新的位置
-        $('.dot').offset({
+        $('.dove').offset({
             top: '500',
             left: '20',
         });
 
         $('button').on('click', function () {
-            $('.dot').css('background', 'hotpink').offset({
-                top: '320',
-                left: '520',
+            $('.dove').css('color', 'lightblue').offset({
+                top: '220',
+                left: '830',
 
             });
         });
+
+        //問題：鳥飛過去的時候.box會往右移動？
 
 
 
