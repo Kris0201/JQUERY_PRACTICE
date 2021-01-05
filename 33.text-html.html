@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        span {
+            color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <button class="btn btn-primary" id="getText">get Text</button>
+        <button class="btn btn-primary" id="getHtml">get Html</button>
+        <button class="btn btn-primary" id="getHtmlText">get Html Text</button>
+
+        <h1 id="sample">Hello <span>World</span></h1>
+        <h1 id="result"></h1>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        //得到text
+        $('#getText').on('click', function () {
+            let content = $('#sample').text();
+            $('#result').text(content)
+        });
+
+        //得到text之外也吃到css
+        $('#getHtml').on('click', function () {
+            let content = $('#sample').html();
+            $('#result').html(content)
+        });
+
+        //得到html中的整個字串Hello <span>World</span>
+        $('#getHtmlText').on('click', function () {
+            let content = $('#sample').html();
+            $('#result').text(content);
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

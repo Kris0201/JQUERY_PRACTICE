@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic filter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+  <main>
+    <div class="wrap">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+      <div class="box">box6</div>
+      <div class="box">
+        <span>
+          fox
+        </span>
+        <span>
+          box7
+        </span>
+      </div>
+      <div class="box">box8</div>
+      <div class="box">box9</div>
+      <div class="box">box10</div>
+      <div class="box">box11</div>
+      <div class="box">box12</div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    //$('div:first-child').css('background','lightblue');
+    //會選到wrap和wrap底下的第一個box
+
+    //$('.wrap:first-child').css('background','lightblue');
+    //既是.wrap又是main的first-child
+
+    //$('div :first-child').css('background','lightblue');
+    //只會選到wrap底下的第一個box
+
+
+    //$('.wrap :last-child').css('background', 'lightblue');
+
+    $('div:nth-child(1)').css('background', 'gray');
+    //會選到main底下的第一個小孩wrap，和wrap底下的第一個小孩box，nth-child()從1開始算
+
+    $('div:nth-child(6)').css('background', 'lightgreen');
+
+    // $('span:first-of-type').css('color', 'white');
+    //改變的是span這個種類的第一個，這邊只有一個，就是改變span的文字顏色
+
+    $('span:only-child').css('color', 'white');
+    //:only-child：匹配沒有任何手足的元素：因為該層中有兩個span，span就失去了作為該層唯一子層的特性，所以會讀不到這個設定
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
